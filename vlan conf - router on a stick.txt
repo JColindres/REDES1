@@ -1,0 +1,131 @@
+sw1-----------------------------
+
+sh cdp neighbors
+vlan database
+vtp domain REDES1
+vtp password REDES1
+vtp v2-mode
+vtp server
+
+configure terminal
+interface range fastEthernet 1/0 - 15
+
+speed 100
+duplex full
+no shutdown
+exit
+
+interface range fastEthernet 1/0 - 2
+switchport mode trunk
+exit
+
+exit
+vlan database
+vlan 10 name ESTUDIANTES
+vlan 20 name DOCENTES
+vlan 30 name AUXILIARES
+vlan 40 name DIRECTORES
+vlan 50 name SECRETARIAS
+vlan 60 name SERVIDORES
+exit
+
+sh vlan-switch
+
+write memory
+sh vtp status
+
+configure terminal
+interface fastEthernet 1/14 y 15
+switchport mode trunk
+exit
+exit
+write memory
+
+sw2,3,4------------------------
+si sale como r s i en capacidad:
+no ip routing
+
+vlan database
+vtp password REDES1
+vtp domain REDES1
+vtp v2-mode
+vtp client
+
+configure terminal
+interface range fastEthernet 1/0 - 15
+
+speed 100
+duplex full
+no shutdown
+exit
+/**********
+interface fastEthernet 1/0
+switchport mode trunk
+exit
+-----------
+interface fastEthernet 1/1
+switchport mode trunk
+exit
+-----------
+interface fastEthernet 1/2
+switchport mode trunk
+exit
+**********/
+
+exit
+
+sh vlan-switch
+
+write memory
+sh vtp status
+
+/****switch 2 y 3
+configure terminal
+interface fastEthernet 1/10
+switchport mode access
+switchport access vlan 10
+exit
+exit
+*****switch 4
+configure terminal
+interface fastEthernet 1/10
+switchport mode access
+switchport access vlan 20
+exit
+exit
+*******/
+
+sh interfaces status
+
+
+/*******************
+configure terminal
+interface loopback 10
+ip address 192.168.10.10 255.255.255.0
+exit
+exit
+********************
+configure terminal
+interface loopback 10
+ip address 192.168.10.20 255.255.255.0
+exit
+exit
+********************
+configure terminal
+interface loopback 20
+ip address 192.168.20.10 255.255.255.0
+exit
+exit
+
+
+router----------------
+
+configurar la interfaz 0/0 normalmente sin agregar ip address
+
+configure terminal
+interface fastEthernet 0/0.10 y 20 despues
+encapsulation dot1Q 20
+ip address 192.168.20.254 255.255.255.0
+exit
+exit
+

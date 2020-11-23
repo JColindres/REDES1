@@ -1,0 +1,35 @@
+Sep 25 16:51:02.568 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 25 16:51:02.569 HYPERVISOR: Started on IP = localhost, TCP port = 59002.
+Sep 25 16:51:03.050 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 25 16:51:03.051 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips 
+Sep 25 16:51:03.051 GENERAL: working_dir=C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips
+Sep 25 16:51:03.051 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips\4ac6b05d-f7e5-46f8-bd79-e4c80728d3e6 
+Sep 25 16:51:03.073 GENERAL: working_dir=C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips\4ac6b05d-f7e5-46f8-bd79-e4c80728d3e6
+Sep 25 16:51:03.073 HYPERVISOR: exec_cmd: vm create SW3 3 c3725 
+Sep 25 16:51:03.075 VM: VM SW3 created.
+Sep 25 16:51:03.076 HYPERVISOR: exec_cmd: vm set_con_tcp_port SW3 5002 
+Sep 25 16:51:03.076 HYPERVISOR: exec_cmd: c3725 get_mac_addr SW3 
+Sep 25 16:51:03.076 HYPERVISOR: exec_cmd: vm set_disk0 SW3 1 
+Sep 25 16:51:03.077 HYPERVISOR: exec_cmd: vm set_exec_area SW3 64 
+Sep 25 16:51:03.078 HYPERVISOR: exec_cmd: vm get_status SW3 
+Sep 25 16:51:03.078 HYPERVISOR: exec_cmd: vm set_idle_pc SW3 0x60bf8ba0 
+Sep 25 16:51:03.079 HYPERVISOR: exec_cmd: vm set_ios SW3 C:/Users/pablo/Desktop/Routers-0970SS2020/c3725-adventerprisek9-mz124-15.image 
+Sep 25 16:51:03.079 HYPERVISOR: exec_cmd: c3725 set_mac_addr SW3 c203.3fb4.0000 
+Sep 25 16:51:03.080 HYPERVISOR: exec_cmd: vm set_nvram SW3 256 
+Sep 25 16:51:03.080 HYPERVISOR: exec_cmd: vm get_status SW3 
+Sep 25 16:51:03.081 HYPERVISOR: exec_cmd: vm slot_add_binding SW3 1 0 NM-16ESW 
+Sep 25 16:51:05.530 HYPERVISOR: exec_cmd: nio create_udp udp-b807e1f3-19ab-4902-9aa6-e70963bf3ae8 10010 127.0.0.1 10011 
+Sep 25 16:51:05.762 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW3 1 1 udp-b807e1f3-19ab-4902-9aa6-e70963bf3ae8 
+Sep 25 16:51:05.763 HYPERVISOR: exec_cmd: vm get_status SW3 
+Sep 25 16:51:06.266 HYPERVISOR: exec_cmd: nio create_udp udp-fb86e00e-82a8-43ef-8d75-501202ac5e80 10024 127.0.0.1 10025 
+Sep 25 16:51:06.269 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW3 1 10 udp-fb86e00e-82a8-43ef-8d75-501202ac5e80 
+Sep 25 16:51:06.270 HYPERVISOR: exec_cmd: vm get_status SW3 
+Sep 25 16:54:31.707 HYPERVISOR: exec_cmd: vm get_status SW3 
+Sep 25 16:54:31.708 HYPERVISOR: exec_cmd: vm extract_config SW3 
+Sep 25 16:54:31.964 HYPERVISOR: exec_cmd: vm get_status SW3 
+Sep 25 16:54:31.965 HYPERVISOR: exec_cmd: vm extract_config SW3 
+Sep 25 16:54:31.972 HYPERVISOR: exec_cmd: vm delete SW3 
+Sep 25 16:54:31.973 VM: VM SW3 destroyed.
+Sep 25 16:54:31.984 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 25 16:54:32.295 HYPERVISOR: Stopped.
+Sep 25 16:54:32.295 GENERAL: reset done.

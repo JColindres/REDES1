@@ -1,0 +1,22 @@
+El segundo examen parcial consiste en lo siguiente:
+
+Realizar en GNS3 y/o Eve-NG el modelo jerarquico Cisco (sencillo) en cualquier modalidad en el nucleo. 
+Utilizando un Router o utilizando un Switch L3. Nucleo, distribución y acceso, 
+con al menos 2 VLANs comunicadas entre sí con 1 cliente en cada VLAN con un ACL que bloque el ICMP (ping).
+
+El Nucleo por default permite la comunicación entre VLANs, por lo tanto deben crear un ACL que bloquee el trafico ICMP. 
+La forma de validarlo puede ser de 2 formas:
+a) No se observa comunicación visual al hacer ping entre los clientes
+b) El contador del ACL para la sección Deny se incrementará
+
+Una vez configurado el examen, deberán hacer un video de un mínimo de 5 minutos y máximo 10 minutos 
+en donde explican los conceptos implementados en el diagrama. 
+Minimo 5 conceptos. Suben el video a youtube y comparten el enlace. Publicaré y compartiré un Excel 
+para que anoten el URL de su examen.
+
+El examen se entrega el sabado 7 de noviembre a mas tardar las 23:59 horas. El sábado 7 de noviembre 
+tendremos clase en el horario normal.
+
+Cualquier consulta favor de comunicarse a pphrymyq@gmail.com
+
+Saludos a tod@s.

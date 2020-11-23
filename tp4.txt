@@ -1,0 +1,566 @@
+NUCLEO#confi
+NUCLEO#configure t
+NUCLEO#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NUCLEO(config)#inter
+NUCLEO(config)#interface ra
+NUCLEO(config)#interface range fa
+NUCLEO(config)#interface range fastEthernet 1/0 - 15
+NUCLEO(config-if-range)#spee
+NUCLEO(config-if-range)#speed 100
+NUCLEO(config-if-range)#d
+NUCLEO(config-if-range)#du
+NUCLEO(config-if-range)#duplex f
+NUCLEO(config-if-range)#duplex full
+NUCLEO(config-if-range)#switch
+NUCLEO(config-if-range)#switchport mode
+NUCLEO(config-if-range)#switchport mode t
+NUCLEO(config-if-range)#switchport mode trunk
+NUCLEO(config-if-range)#
+*Mar  1 00:01:31.319: %DTP-5-TRUNKPORTON: Port Fa1/0-2 has become dot1q trunk
+NUCLEO(config-if-range)#shut
+NUCLEO(config-if-range)#shutdown
+NUCLEO(config-if-range)#
+*Mar  1 00:01:40.875: %DTP-5-NONTRUNKPORTON: Port Fa1/0-2 has become non-trunk
+*Mar  1 00:01:42.359: %LINK-5-CHANGED: Interface FastEthernet1/0, changed state to administratively down
+*Mar  1 00:01:42.379: %LINK-5-CHANGED: Interface FastEthernet1/1, changed state to administratively down
+*Mar  1 00:01:42.391: %LINK-5-CHANGED: Interface FastEthernet1/2, changed state to administratively down
+*Mar  1 00:01:42.399: %LINK-5-CHANGED: Interface FastEthernet1/3, changed state to administratively down
+*Mar  1 00:01:42.399: %LINK-5-CHANGED: Interface FastEthernet1/4, changed state to administratively down
+*Mar  1 00:01:42.399: %LINK-5-CHANGED: Interface FastEthernet1/5, changed state to administratively down
+*Mar  1 00:01:42.403: %LINK-5-CHANGED: Interface FastEthernet1/6, changed state to administratively down
+*Mar  1 00:01:42.403: %LINK-5-CHANGED: Interface FastEthernet1/7, changed state to administratively down
+*Mar  1 00:01:42.407: %LINK-5-CHANGED: Interface FastEthernet1/8, changed state to administratively down
+*Mar  1 00:01:42.407: %LINK-5-CHANGED: Interface FastEthernet1/9, changed state to administratively down
+NUCLEO(config-if-range)#
+NUCLEO(config-if-range)#
+*Mar  1 00:01:43.359: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to down
+*Mar  1 00:01:43.379: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/1, changed state to down
+*Mar  1 00:01:43.391: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/2, changed state to down
+NUCLEO(config-if-range)#no sh
+NUCLEO(config-if-range)#no shutdown
+NUCLEO(config-if-range)#
+*Mar  1 00:01:49.123: %DTP-5-TRUNKPORTON: Port Fa1/0-2 has become dot1q trunk
+*Mar  1 00:01:50.591: %LINK-3-UPDOWN: Interface FastEthernet1/3, changed state to up
+*Mar  1 00:01:50.595: %LINK-3-UPDOWN: Interface FastEthernet1/4, changed state to up
+*Mar  1 00:01:50.595: %LINK-3-UPDOWN: Interface FastEthernet1/5, changed state to up
+*Mar  1 00:01:50.595: %LINK-3-UPDOWN: Interface FastEthernet1/6, changed state to up
+*Mar  1 00:01:50.599: %LINK-3-UPDOWN: Interface FastEthernet1/7, changed state to up
+*Mar  1 00:01:50.599: %LINK-3-UPDOWN: Interface FastEthernet1/8, changed state to up
+*Mar  1 00:01:50.603: %LINK-3-UPDOWN: Interface FastEthernet1/9, changed state to up
+*Mar  1 00:01:50.603: %LINK-3-UPDOWN: Interface FastEthernet1/10, changed state to up
+NUCLEO(config-if-range)#
+*Mar  1 00:01:50.607: %LINK-3-UPDOWN: Interface FastEthernet1/11, changed state to up
+*Mar  1 00:01:50.607: %LINK-3-UPDOWN: Interface FastEthernet1/12, changed state to up
+*Mar  1 00:01:50.607: %LINK-3-UPDOWN: Interface FastEthernet1/13, changed state to up
+*Mar  1 00:01:50.607: %LINK-3-UPDOWN: Interface FastEthernet1/14, changed state to up
+*Mar  1 00:01:50.611: %LINK-3-UPDOWN: Interface FastEthernet1/15, changed state to up
+NUCLEO(config-if-range)#
+*Mar  1 00:01:51.555: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+*Mar  1 00:01:51.567: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/1, changed state to up
+*Mar  1 00:01:51.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/2, changed state to up
+NUCLEO(config-if-range)#exit
+NUCLEO(config)#exit
+NUCLEO#writ
+*Mar  1 00:02:06.467: %SYS-5-CONFIG_I: Configured from console by console
+NUCLEO#write
+NUCLEO#write m
+NUCLEO#write me
+NUCLEO#write memory
+Building configuration...
+[OK]
+NUCLEO#sh cdp ne
+NUCLEO#sh cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+NUCLEO#vlan da
+NUCLEO#vlan database
+% Warning: It is recommended to configure VLAN from config mode,
+  as VLAN database mode is being deprecated. Please consult user
+  documentation for configuring VTP/VLAN in config mode.
+
+NUCLEO(vlan)#vtp do
+NUCLEO(vlan)#vtp domain REDES1
+Changing VTP domain name from NULL to REDES1
+NUCLEO(vlan)#VTP PA
+NUCLEO(vlan)#VTP PAssword
+% Incomplete command.
+
+NUCLEO(vlan)#VTP PAssword REDES1
+Setting device VLAN database password to REDES1.
+NUCLEO(vlan)#vtp v
+NUCLEO(vlan)#vtp v2-mode
+V2 mode enabled.
+NUCLEO(vlan)#vtp ser
+NUCLEO(vlan)#vtp server
+Device mode already VTP SERVER.
+NUCLEO(vlan)#vla
+NUCLEO(vlan)#vlan 10 name ESTUDIANTES
+VLAN 10 added:
+    Name: ESTUDIANTES
+NUCLEO(vlan)#vlan 20 name DOCENTES
+VLAN 20 added:
+    Name: DOCENTES
+NUCLEO(vlan)#vlan 30 name SERVIDORES
+VLAN 30 added:
+    Name: SERVIDORES
+NUCLEO(vlan)#vlan 30 name AUXILIARES
+VLAN 30 modified:
+    Name: AUXILIARES
+NUCLEO(vlan)#vlan 40 name SERVIDORES
+VLAN 40 added:
+    Name: SERVIDORES
+NUCLEO(vlan)#EXIT
+APPLY completed.
+Exiting....
+NUCLEO#sh vl
+NUCLEO#sh vlan-s
+NUCLEO#sh vlan-switch
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa1/3, Fa1/4, Fa1/5, Fa1/6
+                                                Fa1/7, Fa1/8, Fa1/9, Fa1/10
+                                                Fa1/11, Fa1/12, Fa1/13, Fa1/14
+                                                Fa1/15
+10   ESTUDIANTES                      active
+20   DOCENTES                         active
+30   AUXILIARES                       active
+40   SERVIDORES                       active
+1002 fddi-default                     act/unsup
+1003 trcrf-default                    act/unsup
+1004 fddinet-default                  act/unsup
+1005 trbrf-default                    act/unsup
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        1002   1003
+10   enet  100010     1500  -      -      -        -    -        0      0
+20   enet  100020     1500  -      -      -        -    -        0      0
+30   enet  100030     1500  -      -      -        -    -        0      0
+40   enet  100040     1500  -      -      -        -    -        0      0
+1002 fddi  101002     1500  -      -      -        -    -        1      1003
+1003 trcrf 101003     4472  1005   3276   -        -    srb      1      1002
+1004 fdnet 101004     1500  -      -      1        ibm  -        0      0
+1005 trbrf 101005     4472  -      -      15       ibm  -        0      0
+
+
+VLAN AREHops STEHops Backup CRF
+---- ------- ------- ----------
+1003 7       7       off
+NUCLEO#
+NUCLEO#
+NUCLEO#
+NUCLEO#
+NUCLEO#
+NUCLEO#
+NUCLEO#write
+NUCLEO#write me
+NUCLEO#write memory
+Building configuration...
+[OK]
+NUCLEO#sh ip
+NUCLEO#sh ip in
+NUCLEO#sh ip int
+NUCLEO#sh ip interface br
+NUCLEO#sh ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES NVRAM  administratively down down
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down
+FastEthernet1/0            unassigned      YES unset  up                    up
+FastEthernet1/1            unassigned      YES unset  up                    up
+FastEthernet1/2            unassigned      YES unset  up                    up
+FastEthernet1/3            unassigned      YES unset  up                    down
+FastEthernet1/4            unassigned      YES unset  up                    down
+FastEthernet1/5            unassigned      YES unset  up                    down
+FastEthernet1/6            unassigned      YES unset  up                    down
+FastEthernet1/7            unassigned      YES unset  up                    down
+FastEthernet1/8            unassigned      YES unset  up                    down
+FastEthernet1/9            unassigned      YES unset  up                    down
+FastEthernet1/10           unassigned      YES unset  up                    down
+FastEthernet1/11           unassigned      YES unset  up                    down
+FastEthernet1/12           unassigned      YES unset  up                    down
+FastEthernet1/13           unassigned      YES unset  up                    down
+FastEthernet1/14           unassigned      YES unset  up                    down
+FastEthernet1/15           unassigned      YES unset  up                    down
+Vlan1                      unassigned      YES NVRAM  administratively down down
+NUCLEO#
+NUCLEO#conf
+NUCLEO#configure t
+NUCLEO#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NUCLEO(config)#inter
+NUCLEO(config)#interface vl
+NUCLEO(config)#interface vlan 10
+NUCLEO(config-if)#des
+NUCLEO(config-if)#description
+*Mar  1 00:17:54.731: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+NUCLEO(config-if)#description vl
+NUCLEO(config-if)#description vlan ESTUDIANTES
+NUCLEO(config-if)#description vlan ESTUDIANTES
+NUCLEO(config-if)#ip add
+NUCLEO(config-if)#ip address 192.168.10.254 255.255.255.0
+NUCLEO(config-if)#exit
+NUCLEO(config)#int
+NUCLEO(config)#interface vl
+NUCLEO(config)#interface vlan 20
+NUCLEO(config-if)#
+*Mar  1 00:18:37.411: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan20, changed state to up
+NUCLEO(config-if)#des
+NUCLEO(config-if)#description DOCENTES
+NUCLEO(config-if)#ip add
+NUCLEO(config-if)#ip address 192.168.20.254 255.255.255.0
+NUCLEO(config-if)#exit
+NUCLEO(config)#int
+NUCLEO(config)#interface vl
+NUCLEO(config)#interface vlan 30
+NUCLEO(config-if)#
+*Mar  1 00:19:33.795: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan30, changed state to up
+NUCLEO(config-if)#des
+NUCLEO(config-if)#description AUXILIARES
+NUCLEO(config-if)#ip add
+NUCLEO(config-if)#ip address 192.168.30.254 255.255.255.0
+NUCLEO(config-if)#exit
+NUCLEO(config)#int
+NUCLEO(config)#interface vl
+NUCLEO(config)#interface vlan 40
+NUCLEO(config-if)#des
+NUCLEO(config-if)#description
+*Mar  1 00:20:12.999: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan40, changed state to up
+NUCLEO(config-if)#description SERVIDORES
+NUCLEO(config-if)#ip add
+NUCLEO(config-if)#ip address 192.168.40.254 255.255.255.0
+NUCLEO(config-if)#exit
+NUCLEO(config)#exit
+NUCLEO#wie
+*Mar  1 00:20:56.147: %SYS-5-CONFIG_I: Configured from console by console
+NUCLEO#w
+NUCLEO#wri
+NUCLEO#write me
+NUCLEO#write memory
+Building configuration...
+[OK]
+NUCLEO#sh ip in
+NUCLEO#sh ip int
+NUCLEO#sh ip interface br
+NUCLEO#sh ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES NVRAM  administratively down down
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down
+FastEthernet1/0            unassigned      YES unset  up                    up
+FastEthernet1/1            unassigned      YES unset  up                    up
+FastEthernet1/2            unassigned      YES unset  up                    up
+FastEthernet1/3            unassigned      YES unset  up                    down
+FastEthernet1/4            unassigned      YES unset  up                    down
+FastEthernet1/5            unassigned      YES unset  up                    down
+FastEthernet1/6            unassigned      YES unset  up                    down
+FastEthernet1/7            unassigned      YES unset  up                    down
+FastEthernet1/8            unassigned      YES unset  up                    down
+FastEthernet1/9            unassigned      YES unset  up                    down
+FastEthernet1/10           unassigned      YES unset  up                    down
+FastEthernet1/11           unassigned      YES unset  up                    down
+FastEthernet1/12           unassigned      YES unset  up                    down
+FastEthernet1/13           unassigned      YES unset  up                    down
+FastEthernet1/14           unassigned      YES unset  up                    down
+FastEthernet1/15           unassigned      YES unset  up                    down
+Vlan1                      unassigned      YES NVRAM  administratively down down
+Vlan10                     192.168.10.254  YES manual up                    up
+Vlan20                     192.168.20.254  YES manual up                    up
+Vlan30                     192.168.30.254  YES manual up                    up
+Vlan40                     192.168.40.254  YES manual up                    up
+NUCLEO#
+NUCLEO#
+NUCLEO#ping 192.168.10.254
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.10.254, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/4 ms
+NUCLEO#ping 192.168.20.254
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.20.254, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+NUCLEO#ping 192.168.30.254
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.30.254, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+NUCLEO#ping 192.168.40.254
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.40.254, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/4 ms
+NUCLEO#ping 192.168.40.254 sour
+NUCLEO#ping 192.168.40.254 source 10
+
+% Incomplete command.
+
+NUCLEO#ping 192.168.40.254 source vlan 10
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.40.254, timeout is 2 seconds:
+Packet sent with a source address of 192.168.10.254
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+NUCLEO#sh int
+NUCLEO#sh interfaces st
+NUCLEO#sh interfaces statu
+NUCLEO#sh interfaces status
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa1/0                      connected    trunk        full     100 10/100BaseTX
+Fa1/1                      connected    trunk        full     100 10/100BaseTX
+Fa1/2                      connected    trunk        full     100 10/100BaseTX
+Fa1/3                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/4                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/5                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/6                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/7                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/8                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/9                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/10                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/11                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/12                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/13                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/14                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/15                     notconnect   1            auto    auto 10/100BaseTX
+NUCLEO#sh interfaces status
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa1/0                      connected    trunk        full     100 10/100BaseTX
+Fa1/1                      connected    trunk        full     100 10/100BaseTX
+Fa1/2                      connected    trunk        full     100 10/100BaseTX
+Fa1/3                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/4                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/5                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/6                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/7                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/8                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/9                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/10                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/11                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/12                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/13                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/14                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/15                     notconnect   1            auto    auto 10/100BaseTX
+NUCLEO#conf
+NUCLEO#configure t
+NUCLEO#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NUCLEO(config)#inte
+NUCLEO(config)#interface f
+NUCLEO(config)#interface fastEthernet 1/10
+NUCLEO(config-if)#no swit
+NUCLEO(config-if)#no switchport mode t
+NUCLEO(config-if)#no switchport mode tr
+NUCLEO(config-if)#no switchport mode trunk
+NUCLEO(config-if)#swi
+NUCLEO(config-if)#switchport
+NUCLEO(config-if)#sw
+NUCLEO(config-if)#switchport mode ac
+NUCLEO(config-if)#switchport mode access
+NUCLEO(config-if)#s
+NUCLEO(config-if)#sw
+NUCLEO(config-if)#switchport acce
+NUCLEO(config-if)#switchport access vla
+NUCLEO(config-if)#switchport access vlan 40
+NUCLEO(config-if)#desc
+NUCLEO(config-if)#description SERVIDOR
+NUCLEO(config-if)#exi
+NUCLEO(config-if)#exit
+NUCLEO(config)#e
+NUCLEO(config)#ex
+NUCLEO(config)#exit
+NUCLEO#
+*Mar  1 00:27:41.687: %SYS-5-CONFIG_I: Configured from console by console
+NUCLEO#wri
+NUCLEO#write m
+NUCLEO#write me
+NUCLEO#write memory
+Building configuration...
+[OK]
+NUCLEO#sh interfaces status
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa1/0                      connected    trunk        full     100 10/100BaseTX
+Fa1/1                      connected    trunk        full     100 10/100BaseTX
+Fa1/2                      connected    trunk        full     100 10/100BaseTX
+Fa1/3                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/4                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/5                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/6                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/7                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/8                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/9                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/10  SERVIDOR           notconnect   40           auto    auto 10/100BaseTX
+Fa1/11                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/12                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/13                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/14                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/15                     notconnect   1            auto    auto 10/100BaseTX
+NUCLEO#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NUCLEO(config)#interface fastEthernet 1/10
+NUCLEO(config-if)#spe
+NUCLEO(config-if)#speed 100
+NUCLEO(config-if)#d
+NUCLEO(config-if)#du
+NUCLEO(config-if)#duplex f
+NUCLEO(config-if)#duplex full
+NUCLEO(config-if)#no sh
+NUCLEO(config-if)#no shutdown
+NUCLEO(config-if)#exit
+NUCLEO(config)#exit
+NUCLEO#write
+NUCLEO#write
+*Mar  1 00:29:00.939: %SYS-5-CONFIG_I: Configured from console by console
+NUCLEO#write m
+NUCLEO#write mem
+NUCLEO#write memory
+Building configuration...
+[OK]
+NUCLEO#sh int
+NUCLEO#sh interfaces sta
+NUCLEO#sh interfaces status
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa1/0                      connected    trunk        full     100 10/100BaseTX
+Fa1/1                      connected    trunk        full     100 10/100BaseTX
+Fa1/2                      connected    trunk        full     100 10/100BaseTX
+Fa1/3                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/4                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/5                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/6                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/7                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/8                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/9                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/10  SERVIDOR           notconnect   40           auto    auto 10/100BaseTX
+Fa1/11                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/12                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/13                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/14                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/15                     notconnect   1            auto    auto 10/100BaseTX
+NUCLEO#conf
+NUCLEO#configure t
+NUCLEO#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+NUCLEO(config)#ra
+NUCLEO(config)#range f
+NUCLEO(config)#range fa
+NUCLEO(config)#int
+NUCLEO(config)#interface r
+NUCLEO(config)#interface range f
+NUCLEO(config)#interface range fastEthernet 1/0 - 15
+NUCLEO(config-if-range)#shutdown
+NUCLEO(config-if-range)#
+*Mar  1 00:32:00.739: %DTP-5-NONTRUNKPORTON: Port Fa1/0-2 has become non-trunk
+*Mar  1 00:32:01.279: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to down
+*Mar  1 00:32:01.283: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan20, changed state to down
+*Mar  1 00:32:01.283: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan30, changed state to down
+*Mar  1 00:32:01.287: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan40, changed state to down
+NUCLEO(config-if-range)#
+*Mar  1 00:32:02.199: %LINK-5-CHANGED: Interface FastEthernet1/0, changed state to administratively down
+*Mar  1 00:32:02.251: %LINK-5-CHANGED: Interface FastEthernet1/1, changed state to administratively down
+*Mar  1 00:32:02.271: %LINK-5-CHANGED: Interface FastEthernet1/2, changed state to administratively down
+*Mar  1 00:32:02.283: %LINK-5-CHANGED: Interface FastEthernet1/3, changed state to administratively down
+*Mar  1 00:32:02.287: %LINK-5-CHANGED: Interface FastEthernet1/4, changed state to administratively down
+*Mar  1 00:32:02.287: %LINK-5-CHANGED: Interface FastEthernet1/5, changed state to administratively down
+*Mar  1 00:32:02.291: %LINK-5-CHANGED: Interface FastEthernet1/6, changed state to administratively down
+*Mar  1 00:32:02.291: %LINK-5-CHANGED: Interface FastEthernet1/7, changed state to administratively down
+*Mar  1 00:32:02.295: %LINK-5-CHANGED: Interface FastEthernet1/8, changed state to administratively down
+*Mar  1 00:32:02.295: %LINK-5-CHANGED: Interface FastEthernet1/9, changed state to administratively down
+NUCLEO(config-if-range)#
+NUCLEO(config-if-range)#
+*Mar  1 00:32:03.199: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to down
+*Mar  1 00:32:03.251: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/1, changed state to down
+*Mar  1 00:32:03.271: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/2, changed state to down
+NUCLEO(config-if-range)#no shu
+NUCLEO(config-if-range)#no shutdown
+NUCLEO(config-if-range)#
+*Mar  1 00:32:12.719: %DTP-5-TRUNKPORTON: Port Fa1/0-2 has become dot1q trunk
+*Mar  1 00:32:13.223: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan10, changed state to up
+*Mar  1 00:32:13.227: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan20, changed state to up
+*Mar  1 00:32:13.227: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan30, changed state to up
+*Mar  1 00:32:13.231: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan40, changed state to up
+NUCLEO(config-if-range)#
+*Mar  1 00:32:14.151: %LINK-3-UPDOWN: Interface FastEthernet1/3, changed state to up
+*Mar  1 00:32:14.163: %LINK-3-UPDOWN: Interface FastEthernet1/4, changed state to up
+*Mar  1 00:32:14.175: %LINK-3-UPDOWN: Interface FastEthernet1/5, changed state to up
+*Mar  1 00:32:14.183: %LINK-3-UPDOWN: Interface FastEthernet1/6, changed state to up
+*Mar  1 00:32:14.187: %LINK-3-UPDOWN: Interface FastEthernet1/7, changed state to up
+*Mar  1 00:32:14.191: %LINK-3-UPDOWN: Interface FastEthernet1/8, changed state to up
+*Mar  1 00:32:14.191: %LINK-3-UPDOWN: Interface FastEthernet1/9, changed state to up
+*Mar  1 00:32:14.195: %LINK-3-UPDOWN: Interface FastEthernet1/11, changed state to up
+NUCLEO(config-if-range)#
+*Mar  1 00:32:14.195: %LINK-3-UPDOWN: Interface FastEthernet1/12, changed state to up
+*Mar  1 00:32:14.195: %LINK-3-UPDOWN: Interface FastEthernet1/13, changed state to up
+*Mar  1 00:32:14.199: %LINK-3-UPDOWN: Interface FastEthernet1/14, changed state to up
+*Mar  1 00:32:14.199: %LINK-3-UPDOWN: Interface FastEthernet1/15, changed state to up
+NUCLEO(config-if-range)#
+*Mar  1 00:32:15.119: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/0, changed state to up
+*Mar  1 00:32:15.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/1, changed state to up
+*Mar  1 00:32:15.139: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/2, changed state to up
+*Mar  1 00:32:15.191: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet1/10, changed state to up
+NUCLEO(config-if-range)#exit
+NUCLEO(config)#exit
+NUCLEO#sh
+*Mar  1 00:32:25.463: %SYS-5-CONFIG_I: Configured from console by console
+NUCLEO#sh int
+NUCLEO#sh interfaces status
+
+Port    Name               Status       Vlan       Duplex Speed Type
+Fa1/0                      connected    trunk        full     100 10/100BaseTX
+Fa1/1                      connected    trunk        full     100 10/100BaseTX
+Fa1/2                      connected    trunk        full     100 10/100BaseTX
+Fa1/3                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/4                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/5                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/6                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/7                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/8                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/9                      notconnect   1            auto    auto 10/100BaseTX
+Fa1/10  SERVIDOR           connected    40           full     100 10/100BaseTX
+Fa1/11                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/12                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/13                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/14                     notconnect   1            auto    auto 10/100BaseTX
+Fa1/15                     notconnect   1            auto    auto 10/100BaseTX
+NUCLEO#write m
+NUCLEO#write mem
+NUCLEO#write memory
+Building configuration...
+[OK]
+NUCLEO#sh ip inte
+NUCLEO#sh ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES NVRAM  administratively down down
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down
+FastEthernet1/0            unassigned      YES unset  up                    up
+FastEthernet1/1            unassigned      YES unset  up                    up
+FastEthernet1/2            unassigned      YES unset  up                    up
+FastEthernet1/3            unassigned      YES unset  up                    down
+FastEthernet1/4            unassigned      YES unset  up                    down
+FastEthernet1/5            unassigned      YES unset  up                    down
+FastEthernet1/6            unassigned      YES unset  up                    down
+FastEthernet1/7            unassigned      YES unset  up                    down
+FastEthernet1/8            unassigned      YES unset  up                    down
+FastEthernet1/9            unassigned      YES unset  up                    down
+FastEthernet1/10           unassigned      YES unset  up                    up
+FastEthernet1/11           unassigned      YES unset  up                    down
+FastEthernet1/12           unassigned      YES unset  up                    down
+FastEthernet1/13           unassigned      YES unset  up                    down
+FastEthernet1/14           unassigned      YES unset  up                    down
+FastEthernet1/15           unassigned      YES unset  up                    down
+Vlan1                      unassigned      YES NVRAM  administratively down down
+Vlan10                     192.168.10.254  YES manual up                    up
+Vlan20                     192.168.20.254  YES manual up                    up
+Vlan30                     192.168.30.254  YES manual up                    up
+Vlan40                     192.168.40.254  YES manual up                    up
+NUCLEO#
+NUCLEO#

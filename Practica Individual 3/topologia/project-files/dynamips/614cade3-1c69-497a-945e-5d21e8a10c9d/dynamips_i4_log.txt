@@ -1,0 +1,35 @@
+Sep 25 16:51:02.007 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 25 16:51:02.008 HYPERVISOR: Started on IP = localhost, TCP port = 58999.
+Sep 25 16:51:02.492 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 25 16:51:02.492 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips 
+Sep 25 16:51:02.492 GENERAL: working_dir=C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips
+Sep 25 16:51:02.492 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips\bfcba283-33e2-493e-af50-62e7ce8304ce 
+Sep 25 16:51:02.493 GENERAL: working_dir=C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips\bfcba283-33e2-493e-af50-62e7ce8304ce
+Sep 25 16:51:02.493 HYPERVISOR: exec_cmd: vm create SW2 2 c3725 
+Sep 25 16:51:02.495 VM: VM SW2 created.
+Sep 25 16:51:02.496 HYPERVISOR: exec_cmd: vm set_con_tcp_port SW2 5001 
+Sep 25 16:51:02.496 HYPERVISOR: exec_cmd: c3725 get_mac_addr SW2 
+Sep 25 16:51:02.496 HYPERVISOR: exec_cmd: vm set_disk0 SW2 1 
+Sep 25 16:51:02.497 HYPERVISOR: exec_cmd: vm set_exec_area SW2 64 
+Sep 25 16:51:02.497 HYPERVISOR: exec_cmd: vm get_status SW2 
+Sep 25 16:51:02.498 HYPERVISOR: exec_cmd: vm set_idle_pc SW2 0x60bf8ba0 
+Sep 25 16:51:02.499 HYPERVISOR: exec_cmd: vm set_ios SW2 C:/Users/pablo/Desktop/Routers-0970SS2020/c3725-adventerprisek9-mz124-15.image 
+Sep 25 16:51:02.499 HYPERVISOR: exec_cmd: c3725 set_mac_addr SW2 c202.1cb8.0000 
+Sep 25 16:51:02.500 HYPERVISOR: exec_cmd: vm set_nvram SW2 256 
+Sep 25 16:51:02.500 HYPERVISOR: exec_cmd: vm get_status SW2 
+Sep 25 16:51:02.501 HYPERVISOR: exec_cmd: vm slot_add_binding SW2 1 0 NM-16ESW 
+Sep 25 16:51:05.194 HYPERVISOR: exec_cmd: nio create_udp udp-821841e3-9a6b-46ea-8ffd-5a9b0c50cb57 10004 127.0.0.1 10005 
+Sep 25 16:51:05.440 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW2 1 0 udp-821841e3-9a6b-46ea-8ffd-5a9b0c50cb57 
+Sep 25 16:51:05.441 HYPERVISOR: exec_cmd: vm get_status SW2 
+Sep 25 16:51:06.149 HYPERVISOR: exec_cmd: nio create_udp udp-0322855b-a7ba-4156-b64d-091671d36562 10020 127.0.0.1 10021 
+Sep 25 16:51:06.183 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW2 1 10 udp-0322855b-a7ba-4156-b64d-091671d36562 
+Sep 25 16:51:06.183 HYPERVISOR: exec_cmd: vm get_status SW2 
+Sep 25 16:54:31.706 HYPERVISOR: exec_cmd: vm get_status SW2 
+Sep 25 16:54:31.707 HYPERVISOR: exec_cmd: vm extract_config SW2 
+Sep 25 16:54:32.110 HYPERVISOR: exec_cmd: vm get_status SW2 
+Sep 25 16:54:32.111 HYPERVISOR: exec_cmd: vm extract_config SW2 
+Sep 25 16:54:32.118 HYPERVISOR: exec_cmd: vm delete SW2 
+Sep 25 16:54:32.118 VM: VM SW2 destroyed.
+Sep 25 16:54:32.130 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 25 16:54:32.277 HYPERVISOR: Stopped.
+Sep 25 16:54:32.277 GENERAL: reset done.

@@ -1,0 +1,44 @@
+Sep 25 16:51:01.805 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Sep 25 16:51:01.807 HYPERVISOR: Started on IP = localhost, TCP port = 58996.
+Sep 25 16:51:01.817 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 25 16:51:01.818 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips 
+Sep 25 16:51:01.921 GENERAL: working_dir=C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips
+Sep 25 16:51:01.921 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips\a2aac7ed-5a7c-4275-a9c6-f1f5968df60b 
+Sep 25 16:51:01.945 GENERAL: working_dir=C:\Users\pablo\Documents\REDES1\Practica Individual 3\topologia\project-files\dynamips\a2aac7ed-5a7c-4275-a9c6-f1f5968df60b
+Sep 25 16:51:01.945 HYPERVISOR: exec_cmd: vm create SW1 1 c3725 
+Sep 25 16:51:01.947 VM: VM SW1 created.
+Sep 25 16:51:01.948 HYPERVISOR: exec_cmd: vm set_con_tcp_port SW1 5000 
+Sep 25 16:51:01.948 HYPERVISOR: exec_cmd: c3725 get_mac_addr SW1 
+Sep 25 16:51:01.948 HYPERVISOR: exec_cmd: vm set_disk0 SW1 1 
+Sep 25 16:51:01.949 HYPERVISOR: exec_cmd: vm set_exec_area SW1 64 
+Sep 25 16:51:01.949 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:51:01.950 HYPERVISOR: exec_cmd: vm set_idle_pc SW1 0x60bf8ba0 
+Sep 25 16:51:01.951 HYPERVISOR: exec_cmd: vm set_ios SW1 C:/Users/pablo/Desktop/Routers-0970SS2020/c3725-adventerprisek9-mz124-15.image 
+Sep 25 16:51:01.951 HYPERVISOR: exec_cmd: c3725 set_mac_addr SW1 c201.2ab8.0000 
+Sep 25 16:51:01.952 HYPERVISOR: exec_cmd: vm set_nvram SW1 256 
+Sep 25 16:51:01.952 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:51:01.952 HYPERVISOR: exec_cmd: vm slot_add_binding SW1 1 0 NM-16ESW 
+Sep 25 16:51:04.328 HYPERVISOR: exec_cmd: nio create_udp udp-c9f15b51-8dca-4c28-b78d-63ef0ee1caba 10002 127.0.0.1 10003 
+Sep 25 16:51:05.183 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW1 1 0 udp-c9f15b51-8dca-4c28-b78d-63ef0ee1caba 
+Sep 25 16:51:05.184 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:51:05.517 HYPERVISOR: exec_cmd: nio create_udp udp-4c61cc91-1016-41ac-b201-8788b7440ee8 10008 127.0.0.1 10009 
+Sep 25 16:51:05.520 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW1 1 1 udp-4c61cc91-1016-41ac-b201-8788b7440ee8 
+Sep 25 16:51:05.520 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:51:05.831 HYPERVISOR: exec_cmd: nio create_udp udp-33aababf-e3a1-4a80-a2ba-44dc9e0be851 10014 127.0.0.1 10015 
+Sep 25 16:51:05.834 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW1 1 2 udp-33aababf-e3a1-4a80-a2ba-44dc9e0be851 
+Sep 25 16:51:05.834 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:51:06.428 HYPERVISOR: exec_cmd: nio create_udp udp-b87c0bdc-6fad-4c44-851a-5bd46d23e06e 10032 127.0.0.1 10033 
+Sep 25 16:51:06.431 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW1 1 15 udp-b87c0bdc-6fad-4c44-851a-5bd46d23e06e 
+Sep 25 16:51:06.431 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:51:06.813 HYPERVISOR: exec_cmd: nio create_udp udp-df0e390a-f907-42fc-9c15-ca6814362194 10040 127.0.0.1 10041 
+Sep 25 16:51:06.816 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SW1 1 14 udp-df0e390a-f907-42fc-9c15-ca6814362194 
+Sep 25 16:51:06.816 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:54:31.706 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:54:31.708 HYPERVISOR: exec_cmd: vm extract_config SW1 
+Sep 25 16:54:32.368 HYPERVISOR: exec_cmd: vm get_status SW1 
+Sep 25 16:54:32.369 HYPERVISOR: exec_cmd: vm extract_config SW1 
+Sep 25 16:54:32.372 HYPERVISOR: exec_cmd: vm delete SW1 
+Sep 25 16:54:32.373 VM: VM SW1 destroyed.
+Sep 25 16:54:32.387 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 25 16:54:32.597 HYPERVISOR: Stopped.
+Sep 25 16:54:32.597 GENERAL: reset done.

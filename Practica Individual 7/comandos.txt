@@ -1,0 +1,153 @@
+//////////////////////////////
+//////VRRP////////////////////
+//////////////////////////////
+
+NUCLEO-----------
+
+!
+interface FastEthernet0/0
+ ip address 192.168.100.100 255.255.255.0
+ speed 100
+ full-duplex
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+ip forward-protocol nd
+ip route 0.0.0.0 0.0.0.0 192.168.100.254
+!
+
+
+ALPHA------------
+
+!
+interface FastEthernet0/0
+ ip address 192.168.100.252 255.255.255.0
+ speed 100
+ full-duplex
+ vrrp 1 ip 192.168.100.254
+ vrrp 1 preempt delay minimum 5
+ vrrp 1 priority 110
+!
+interface FastEthernet0/1
+ ip address 10.10.10.1 255.255.255.252
+ speed 100
+ full-duplex
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.100.0
+!
+ip forward-protocol nd
+!
+!
+
+BETA------------
+
+!
+interface FastEthernet0/0
+ ip address 192.168.100.253 255.255.255.0
+ speed 100
+ full-duplex
+ vrrp 1 ip 192.168.100.254
+ vrrp 1 preempt delay minimum 5
+ vrrp 1 priority 120
+!
+interface FastEthernet0/1
+ ip address 20.20.20.1 255.255.255.252
+ speed 100
+ full-duplex
+!
+router rip
+ version 2
+ network 20.0.0.0
+ network 192.168.100.0
+!
+ip forward-protocol nd
+!
+!
+
+GAMMA--------------
+
+!
+interface FastEthernet0/0
+ ip address 10.10.10.2 255.255.255.252
+ speed 100
+ full-duplex
+!
+interface FastEthernet0/1
+ ip address 20.20.20.2 255.255.255.252
+ speed 100
+ full-duplex
+!
+interface FastEthernet1/0
+ ip address 33.33.33.33 255.255.255.0
+ speed 100
+ full-duplex
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 20.0.0.0
+ network 33.0.0.0
+!
+ip forward-protocol nd
+!
+!
+
+//////////////////////////////
+//////HSRP////////////////////
+//////////////////////////////
+
+ALPHA------------
+
+!
+interface FastEthernet0/0
+ ip address 192.168.100.252 255.255.255.0
+ speed 100
+ full-duplex
+ standby 1 ip 192.168.100.254
+ standby 1 priority 115
+ standby 1 preempt delay minimum 5
+!
+interface FastEthernet0/1
+ ip address 10.10.10.1 255.255.255.252
+ speed 100
+ full-duplex
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.100.0
+!
+ip forward-protocol nd
+!
+!
+
+BETA------------
+!
+interface FastEthernet0/0
+ ip address 192.168.100.253 255.255.255.0
+ speed 100
+ full-duplex
+ standby 1 ip 192.168.100.254
+ standby 1 priority 110
+ standby 1 preempt delay minimum 5
+!
+interface FastEthernet0/1
+ ip address 10.10.10.1 255.255.255.252
+ speed 100
+ full-duplex
+!
+router rip
+ version 2
+ network 10.0.0.0
+ network 192.168.100.0
+!
+ip forward-protocol nd
+!
+!
