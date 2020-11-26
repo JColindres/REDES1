@@ -1,0 +1,461 @@
+
+Current configuration : 3212 bytes
+!
+version 12.2(37)SE1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+!
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree vlan 12,22,32,42 priority 24576
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/1
+ no switchport
+ ip address 12.0.0.1 255.0.0.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/2
+ no switchport
+ ip address 32.0.0.1 255.0.0.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/3
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode desirable
+!
+interface FastEthernet0/4
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode desirable
+!
+interface FastEthernet0/5
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode desirable
+!
+interface FastEthernet0/6
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode desirable
+!
+interface FastEthernet0/7
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/8
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/9
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/10
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan12
+ mac-address 0060.5c68.8d01
+ ip address 192.168.12.40 255.255.255.0
+ standby 12 ip 192.168.12.254
+ standby 12 priority 200
+ standby 12 preempt
+!
+interface Vlan22
+ mac-address 0060.5c68.8d02
+ ip address 192.168.22.40 255.255.255.0
+ standby 22 ip 192.168.22.254
+ standby 22 priority 200
+ standby 22 preempt
+!
+interface Vlan32
+ mac-address 0060.5c68.8d03
+ ip address 192.168.32.40 255.255.255.0
+ standby 32 ip 192.168.32.254
+ standby 32 priority 200
+ standby 32 preempt
+!
+interface Vlan42
+ mac-address 0060.5c68.8d04
+ ip address 192.168.42.40 255.255.255.0
+ ip access-group 101 out
+ standby 42 ip 192.168.42.254
+ standby 42 priority 200
+ standby 42 preempt
+!
+router rip
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 12.0.0.2 
+ip route 0.0.0.0 0.0.0.0 32.0.0.2 
+ip route 52.0.0.0 255.0.0.0 12.0.0.2 
+ip route 62.0.0.0 255.0.0.0 32.0.0.2 
+!
+ip flow-export version 9
+!
+!
+access-list 101 permit ip 192.168.32.0 0.0.0.255 host 192.168.42.10
+access-list 101 permit ip 192.168.22.0 0.0.0.255 host 192.168.42.10
+access-list 101 permit ip 192.168.12.0 0.0.0.255 host 192.168.42.10
+access-list 101 permit ip 192.168.12.0 0.0.0.255 host 192.168.42.20
+access-list 101 permit ip 192.168.12.0 0.0.0.255 host 192.168.42.30
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
+
+
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+Current configuration : 3079 bytes
+!
+version 12.2(37)SE1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+!
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree vlan 12,22,32,42 priority 28672
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/1
+ no switchport
+ ip address 42.0.0.1 255.0.0.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/2
+ no switchport
+ ip address 22.0.0.1 255.0.0.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/3
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode auto
+!
+interface FastEthernet0/4
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode auto
+!
+interface FastEthernet0/5
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode auto
+!
+interface FastEthernet0/6
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode auto
+!
+interface FastEthernet0/7
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/8
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/9
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/10
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan12
+ mac-address 0003.e492.b601
+ ip address 192.168.12.41 255.255.255.0
+ standby 12 ip 192.168.12.254
+ standby 12 preempt
+!
+interface Vlan22
+ mac-address 0003.e492.b602
+ ip address 192.168.22.41 255.255.255.0
+ standby 22 ip 192.168.22.254
+ standby 22 preempt
+!
+interface Vlan32
+ mac-address 0003.e492.b603
+ ip address 192.168.32.41 255.255.255.0
+ standby 32 ip 192.168.32.254
+ standby 32 preempt
+!
+interface Vlan42
+ mac-address 0003.e492.b604
+ ip address 192.168.42.41 255.255.255.0
+ ip access-group 102 out
+ standby 42 ip 192.168.42.254
+ standby 42 preempt
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 42.0.0.2 
+ip route 0.0.0.0 0.0.0.0 22.0.0.2 
+ip route 52.0.0.0 255.0.0.0 22.0.0.2 
+ip route 62.0.0.0 255.0.0.0 42.0.0.2 
+!
+ip flow-export version 9
+!
+!
+access-list 102 permit ip 192.168.12.0 0.0.0.255 host 192.168.42.10
+access-list 102 permit ip 192.168.12.0 0.0.0.255 host 192.168.42.20
+access-list 102 permit ip 192.168.12.0 0.0.0.255 host 192.168.42.30
+access-list 102 permit ip 192.168.22.0 0.0.0.255 host 192.168.42.10
+access-list 102 permit ip 192.168.32.0 0.0.0.255 host 192.168.42.10
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
+
+
+//////////////////////////////////////////////
+!sw 1
+conf t
+interface Vlan21
+ mac-address 0060.5c68.8d04
+ ip address 192.168.10.5 255.255.255.0
+ standby 21 ip 192.168.10.254
+ standby 21 priority 200
+ standby 21 preempt
+!
+interface Vlan31
+ mac-address 0060.5c68.8d04
+ ip address 192.168.20.5 255.255.255.0
+ standby 31 ip 192.168.20.254
+ standby 31 priority 200
+ standby 31 preempt
+!
+interface Vlan41
+ mac-address 0060.5c68.8d04
+ ip address 192.168.30.5 255.255.255.0
+ standby 41 ip 192.168.30.254
+ standby 41 priority 200
+ standby 41 preempt
+!
+interface Vlan51
+ mac-address 0060.5c68.8d04
+ ip address 192.168.40.5 255.255.255.0
+ ip access-group 101 out
+ standby 51 ip 192.168.40.254
+ standby 51 priority 200
+ standby 51 preempt
+!
+
+!sw 2
+conf t
+interface Vlan21
+ mac-address 0003.e492.b601
+ ip address 192.168.10.5 255.255.255.0
+ standby 21 ip 192.168.10.254
+ no standby 21 priority 150
+ standby 21 preempt
+ exit
+!
+interface Vlan31
+ mac-address 0003.e492.b602
+ ip address 192.168.10.5 255.255.255.0
+ standby 31 ip 192.168.20.254
+ no standby 31 priority 150
+ standby 31 preempt
+ exit
+!
+interface Vlan41
+ mac-address 0003.e492.b603
+ ip address 192.168.10.5 255.255.255.0
+ standby 41 ip 192.168.30.254
+ no standby 41 priority 150
+ standby 41 preempt
+ exit
+!
+interface Vlan51
+ mac-address 0003.e492.b604
+ ip address 192.168.10.5 255.255.255.0
+ ip access-group 102 out
+ standby 51 ip 192.168.40.254
+ no standby 51 priority 150
+ standby 51 preempt
+ exit
+!
+
+access-list 101 permit icmp 192.168.30.0 0.0.0.255 host 192.168.40.20 echo
+access-list 101 permit icmp 192.168.30.0 0.0.0.255 host 192.168.40.20 echo-reply
+access-list 101 permit icmp 192.168.20.0 0.0.0.255 host 192.168.40.20 echo
+access-list 101 permit icmp 192.168.20.0 0.0.0.255 host 192.168.40.20 echo-reply
+access-list 101 permit icmp 192.168.10.0 0.0.0.255 host 192.168.40.20 echo
+access-list 101 permit icmp 192.168.10.0 0.0.0.255 host 192.168.40.20 echo-reply
+
+access-list 102 permit icmp 192.168.30.0 0.0.0.255 host 192.168.40.20 echo
+access-list 102 permit icmp 192.168.30.0 0.0.0.255 host 192.168.40.20 echo-reply
+access-list 102 permit icmp 192.168.20.0 0.0.0.255 host 192.168.40.20 echo
+access-list 102 permit icmp 192.168.20.0 0.0.0.255 host 192.168.40.20 echo-reply
+access-list 102 permit icmp 192.168.10.0 0.0.0.255 host 192.168.40.20 echo
+access-list 102 permit icmp 192.168.10.0 0.0.0.255 host 192.168.40.20 echo-reply
